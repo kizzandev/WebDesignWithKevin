@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+}
+
+.center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hamburguer > span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  margin-bottom: 7px;
+}
+
+#hamburguer > span:last-child {
+  margin-bottom: 0;
+}
+
+#hamburguer,
+#hamburguer > span {
+  transition: all .4s ease-in-out;
+}
+
+#hamburguer.active {
+  transition-delay: .8s;
+  transform: rotate(45deg);
+}
+#hamburguer.active > span:first-child {
+  width: 0;
+}
+#hamburguer.active > span:nth-child(2) {
+  transition-delay: .4s;
+}
+#hamburguer.active > span:nth-child(3) {
+  transition-delay: .4s;
+  transform: translateY(-9px) rotate(90deg);
+}
